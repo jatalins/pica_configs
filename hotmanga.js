@@ -4,14 +4,14 @@ class NewComicSource extends ComicSource {  // 首行必须为class...
     name = "热辣漫画"
 
     // 唯一标识符
-    key = "ikmmh"
+    key = "hotmanga"
 
-    version = "1.1.1"
+    version = "1.0.0"
 
-    minAppVersion = "3.1.0"
+    minAppVersion = "1.0.0"
 
     // 更新链接
-    url = "https://raw.githubusercontent.com/wgh136/pica_configs/master/ikmmh.js"
+    url = "https://raw.githubusercontent.com/GE-J/pica_configs/master/hotmanga.js"
 
     /// APP启动时或者添加/更新漫画源时执行此函数
     init() {
