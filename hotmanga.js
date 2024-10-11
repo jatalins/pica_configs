@@ -1,6 +1,6 @@
 class NewComicSource extends ComicSource {  // 首行必须为class...
 
-    // 此漫画源的名称
+    // 此漫画源的名称(日本地区屏蔽暂且可以使用此useragent来规避（但是可能有概率无效）Mozilla/5.0 (Linux; Android 12; 21091116AC) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36
     name = "热辣漫画"
 
     // 唯一标识符
@@ -26,7 +26,7 @@ class NewComicSource extends ComicSource {  // 首行必须为class...
         login: async (account, pwd) => {
             let res = await Network.post("https://ymcdnyfqdapp.ikmmh.com/api/user/userarr/login", {
                 "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+                "User-Agent": "Mozilla/5.0 (Linux; Android 12; 21091116AC) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36"
             }, `user=${account}&pass=${pwd}`)
 
             let data = JSON.parse(res.body)
